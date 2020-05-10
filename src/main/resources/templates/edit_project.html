@@ -1,0 +1,30 @@
+</head>
+<body xmlns:th="http://www.w3.org/1999/xhtml">
+<div align="center">
+    <h1>Edit Project Data</h1>
+    <br />
+    <form action="#" th:action="@{/save}" th:object="${project}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Project Number:</td>
+                <td>
+                    <input type="text" th:field="*{id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Project Name:</td>
+                <td>
+                    <input type="text" th:field="*{pName}" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Project Manager</title>
+</head>
+<body>
+<div align="center">
+
+    <a href="index.html">Employees</a>
+    <a href="projects.html">Projects</a>
+    <a href="departments">Departments</a>
+
+    <h1>Projects List</h1>
+    <a th:href="@{/projects/new}">Add New Project</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+        <tr>
+            <th>Project ID</th>
+            <th>Project Name</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="project : ${listProjects}">
+            <td th:text="${project.pNumber}">Project ID</td>
+            <td th:text="${project.pName}">Project Name</td>
+
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
