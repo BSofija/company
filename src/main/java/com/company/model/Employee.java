@@ -75,15 +75,15 @@ public class Employee {
 
     public Employee () {}
 
-    public Employee(Long id, String firstName, String lastName, String email, int salary, Department dNum, List<Project> projects) {
+    public Employee(Long id, String firstName, String lastName, String email, int salary) {
         super();
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.salary = salary;
-        this.dNum = dNum;
-        this.projects = projects;
+        //this.dNum = dNum;
+        //this.projects = projects;
     }
 
 

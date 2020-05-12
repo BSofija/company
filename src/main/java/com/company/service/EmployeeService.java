@@ -18,6 +18,17 @@ public class EmployeeService {
 
     public List<Employee> listAll () {return employeeRepository.findAll();}
 
+    public Employee addNewEmployee(Long id, String firstName, String lastName, String email, int salary) {
+        Employee employee = new Employee(id, firstName, lastName, email, salary);
+        return this.employeeRepository.save(employee);
+
+    }
+
+
+
+
+
+
     public void save (Employee employee) { employeeRepository.save(employee);}
 
     public Employee get(long id) { return employeeRepository.findById(id).get();}
